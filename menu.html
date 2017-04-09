@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="An authentic srilankan and south indian restaurant and takeaway">
+    <meta name="keywords" content="restaurant, takeawat, srilankan, sri lankan, tamil, south indian">
+    <meta name="author" content="Bava Jithendra">
+    <title>Cafe Ceylon | Sri Lankan Restaurant</title>
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div id="branding">
+          <h1>Café Ceylon</h1>
+          <h3>Authentic Sri Lankan and South Indian Restaurant</h3>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="current"><a href="menu.html">Menu</a/></li>
+            <li><a href="contactus.html">Contact Us</a/></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <body>
+      <div class="menu_title">
+        <h1>Our Menu</h1>
+      </div>
+      <div class="tab">
+        <button class="tablinks" onclick="openMenu(event, 'Specials')">Specials</button>
+        <button class="tablinks" onclick="openMenu(event, 'Starters')">Starters</button>
+        <button class="tablinks" onclick="openMenu(event, 'Main')">Main</button>
+      </div>
+
+<div id="Specials" class="tabcontent">
+  <h3>Specials</h3>
+  <p>London is the capital city of England.</p>
+</div>
+
+<div id="Starters" class="tabcontent" hidden>
+  <h3>Starters</h3>
+  <p>Paris is the capital of France.</p>
+</div>
+
+<div id="Main" class="tabcontent" hidden>
+  <h3>Main</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+    </body>
+    <footer>
+      <div>
+        <div class="box">
+          <p>Address</p>
+          <p>47 Stafford Road</p>
+          <p>Wallington</p>
+          <p>SM6 9AP</p>
+        </div>
+      <div class="box">
+        <p>Daily from 10AM to 11PM</p>
+      </div>
+      </div>
+  </footer>
+  </body>
+  <script type="text/javascript">
+  function openMenu(evt, cityName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+  </script>
+</html>

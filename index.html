@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="An authentic srilankan and south indian restaurant and takeaway">
+    <meta name="keywords" content="restaurant, takeawat, srilankan, sri lankan, tamil, south indian">
+    <meta name="author" content="Bava Jithendra">
+    <title>Cafe Ceylon | Sri Lankan Restaurant</title>
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div id="branding">
+          <h1>Café Ceylon</h1>
+          <h3>Authentic Sri Lankan and South Indian Restaurant</h3>
+        </div>
+        <nav>
+          <ul>
+            <li  class="menuList" class="current"><a href="index.html">Home</a></li>
+            <li class="menuList"><a href="menu.html">Menu</a/></li>
+            <li class="menuList"><a href="contactus.html">Contact Us</a/></li>
+          </ul>
+          <div class="menu_i" onclick="showMenu()">
+            <div class="menu_icon"></div>
+            <div class="menu_icon"></div>
+            <div class="menu_icon"></div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <section id="address">
+      <div class="container">
+        <p>47 Stafford Road, Wallington, SM6 9AP <span class="phone">0203 265 0055</span></p>
+      </div>
+
+    </section>
+    <section id="showcase">
+      <div class="container">
+        <img class="slider" src="./img/thali2.png">
+        <img class="slider" src="./img/egghopper4.jpg">
+        <img class="slider" src="./img/dosa.jpg">
+        <img class="slider" src="./img/header.png">
+        <p>Thali - Friday Special</p>
+      </div>
+    </section>
+    <section id="aboutus">
+      <div class="container">
+        <div class="box">
+          <img src="./img/egghopper4.jpg">
+          <h3>The Restaurant</h3>
+          <p>blah blah</p>
+        </div>
+          <div class="box">
+            <img src="./img/dosa.jpg">
+            <h3>The Food</h3>
+            <p>blah blah</p>
+          </div>
+            <div class="box">
+              <img src="./img/header.png">
+              <h3>The Menu</h3>
+              <p>blah blah</p>
+            </div>
+      </div>
+    </section>
+    <footer>
+      <div>
+        <div class="box">
+          <p>Address</p>
+          <p>47 Stafford Road</p>
+          <p>Wallington</p>
+          <p>SM6 9AP</p>
+        </div>
+      <div class="box">
+        <p>Daily from 10AM to 11PM</p>
+      </div>
+      </div>
+  </footer>
+  </body>
+
+  <script type="text/javascript">
+    var index = 1;
+    //showImage(1);
+    autoSlide();
+
+  function showImage(n){
+    var i;
+    var x = document.getElementsByClassName("slider");
+    if(n >x.length){index = 1};
+    if(n <1){index = x.length};
+    for(i=0;i<x.length;i++){
+    x[i].style.display="none";
+  }
+  x[index-1].style.display = "block";
+  index++;
+}
+
+    function autoSlide(){
+      var i;
+      var x = document.getElementsByClassName("slider");
+      for(i=0;i<x.length;i++){
+        x[i].style.display="none";
+      }
+      if(index > x.length){index = 1}
+      x[index-1].style.display = "block";
+      index++;
+      setTimeout(autoSlide, 2000);
+    }
+
+function showMenu(){
+  var i;
+  var x = document.getElementsByClassName("menuList");
+  for(i=0;i<x.length;i++){
+    x[i].style.display="block"
+  }
+
+}
+  </script>
+</html>

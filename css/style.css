@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css?family=Amita');
+body{
+  font: 15px/1.5 Amita, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: #001a00;
+}
+
+.container{
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+header{
+  background: #001a00;
+  color: #ffffff;
+  padding-top: 20px;
+  min-height: 70px;
+  border-bottom: #42f46b 3px solid;
+}
+
+header a{
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+header ul{
+  margin: 0;
+  padding: 0;
+}
+
+header li{
+  float: left;
+  display: inline;
+  padding: 0 20px 0 20px;
+}
+
+header #branding{
+  float: left;
+  color: #ffffff;
+}
+
+header #branding h1{
+  margin: 0;
+}
+
+header #branding h3{
+  margin: 0;
+}
+
+.menu_icon {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    visibility: hidden;
+}
+header nav{
+  float: right;
+  margin-top: 10px;
+}
+
+header .highlight header .current a{
+  color: #e8491d;
+  font-weight: bold;
+}
+
+header a:hover{
+  color: #cccccc;
+  font-weight: bold;
+}
+
+header .current a{
+  color: #f48c41;
+   pointer-events: none;
+   cursor: default;
+}
+
+#address{
+  padding: 0;
+  border-bottom: #42f46b 3px solid;
+}
+
+#address p{
+  color: #ffffff;
+}
+#address .phone{
+  float: right;
+  right: 300px;
+}
+
+#showcase{
+  padding-top: 20px;
+  min-height: 400px;
+  text-align: center;
+  color: #ffffff;
+  position:relative;
+}
+
+#showcase img{
+  width: 100%;
+  height: 100%
+  position:absolute;
+  text-align: center;
+}
+#showcase h5{
+  margin-top: 100px;
+  margin-bottom: 10px;
+  position:absolute;
+  bottom: 100px;
+  left: 320px;
+  text-align: center;
+}
+
+#showcase p{
+  font-size: 20px;
+}
+
+#aboutus{
+  margin-top: 20px;
+  color: #ffffff;
+  border-bottom: #42f46b 3px solid;
+}
+
+#aboutus .box{
+  float: left;
+  text-align: center;
+  width: 30%;
+  padding: 10px;
+}
+
+#aboutus .box img{
+  width: 120px;
+  height: 120px;
+  margin-top: 20px;
+  color: #ffffff;
+  background-color: #e8491d;
+  text-align: center;
+}
+
+footer {
+  background-color: #89f441;
+}
+
+footer .box{
+  float: left;
+  text-align: left;
+  margin-left: 100px;
+  width: 30%;
+  padding: 0;
+  line-height: .5;
+  color: #ffffff;
+}
+
+.menu_title{
+  text-align: center;
+  color: #ffffff;
+}
+
+.tab{
+  text-align: center;
+  padding: 10px;
+}
+.tab button{
+  border: none;
+  text-align: center;
+  padding: 10px 40px;
+  background: #42f46b;
+}
+
+.tabcontent{
+  color: #ffffff;
+  min-height: 80%;
+}
+
+.map{
+  color: #ffffff;
+}
+
+@media(max-width: 768px) {
+  header #branding,
+  header nav,
+  header li,
+  #address p,
+  #address .phone,
+  #aboutus .box{
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+  header{
+    padding: 35px;
+  }
+
+  header li{
+    display: none;
+    width: 100%;
+  }
+  #address .phone{
+    display: block;
+    width: 100%;
+  }
+
+  .menu_i{
+    position: absolute;
+    left: 50%;
+  }
+
+  .menu_icon{
+    visibility: visible;
+  }
+}
