@@ -18,7 +18,7 @@
         </div>
         <nav>
           <ul>
-            <li  class="menuList" class="current"><a href="index.html">Home</a></li>
+            <li  class="menuList current"><a href="index.html">Home</a></li>
             <li class="menuList"><a href="menu.html">Menu</a/></li>
             <li class="menuList"><a href="contactus.html">Contact Us</a/></li>
           </ul>
@@ -111,8 +111,13 @@
 function showMenu(){
   var i;
   var x = document.getElementsByClassName("menuList");
+  var y =document.getElementsByClassName("menu_i");
   for(i=0;i<x.length;i++){
-    x[i].style.display="block"
+    x[i].style.display="block";
+  }
+
+  for(i=0;i<y.length;i++){
+    y[i].style.display="none";
   }
 
 }

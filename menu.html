@@ -18,35 +18,134 @@
         </div>
         <nav>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li class="current"><a href="menu.html">Menu</a/></li>
-            <li><a href="contactus.html">Contact Us</a/></li>
+            <li class="menuList"><a href="index.html">Home</a></li>
+            <li class="current menuList"><a href="menu.html">Menu</a/></li>
+            <li class="menuList"><a href="contactus.html">Contact Us</a/></li>
           </ul>
+          <div class="menu_i" onclick="showMenu()">
+            <div class="menu_icon"></div>
+            <div class="menu_icon"></div>
+            <div class="menu_icon"></div>
+          </div>
         </nav>
       </div>
     </header>
     <body>
+          <div class="menu_content">
       <div class="menu_title">
         <h1>Our Menu</h1>
       </div>
       <div class="tab">
-        <button class="tablinks" onclick="openMenu(event, 'Specials')">Specials</button>
-        <button class="tablinks" onclick="openMenu(event, 'Starters')">Starters</button>
-        <button class="tablinks" onclick="openMenu(event, 'Main')">Main</button>
+        <button class="tablinks Specials" onclick="openMenu(event, 'Specials')">Specials</button>
+        <button class="tablinks Soup currentMenu" onclick="openMenu(event, 'Soup')">Soup</button>
+        <button class="tablinks Starters" onclick="openMenu(event, 'Starters')">Starters</button>
+        <button class="tablinks Main" onclick="openMenu(event, 'Main')">Main</button>
+        <button class="tablinks Dessert" onclick="openMenu(event, 'Dessert')">Dessert</button>
       </div>
+<div class="tab2">
 
-<div id="Specials" class="tabcontent">
-  <h3>Specials</h3>
-  <p>London is the capital city of England.</p>
+<div id="Soup" class="tabcontent">
+  <h3>Soup</h3>
+  <table >
+	<tbody>
+		<tr class="menu_item_title">
+			<td> No</td>
+			<td> Name</td>
+			<td class="price"> Price</td>
+		</tr>
+		<tr class="menu_item_type">
+			<td></td>
+			<td> </td>
+			<td> </td>
+		</tr>
+		<tr>
+			<td> 1</td>
+			<td> Rasam</td>
+			<td> £2.25</td>
+		</tr>
+		<tr>
+			<td> 2</td>
+			<td> Chicken Rasam</td>
+			<td> £3.50</td>
+		</tr>
+		<tr>
+			<td> 3</td>
+			<td> Dhal Soup</td>
+			<td> £2.50</td>
+		</tr>
+	</tbody>
+</table>
 </div>
-
 <div id="Starters" class="tabcontent" hidden>
   <h3>Starters</h3>
-  <p>Paris is the capital of France.</p>
+  <table >
+	<tbody>
+		<tr class="menu_item_title">
+			<td> No</td>
+			<td> Name</td>
+			<td class="price"> Price</td>
+		</tr>
+		<tr class="menu_item_type">
+			<td>Vegitarian </td>
+			<td> </td>
+			<td> </td>
+		</tr>
+		<tr>
+			<td> 4</td>
+			<td> Pappodom</td>
+			<td> £1.00</td>
+		</tr>
+		<tr>
+			<td> 5</td>
+			<td> Gobi 65</td>
+			<td> £3.50</td>
+		</tr>
+		<tr>
+			<td> 6</td>
+			<td> Chilli Paneer</td>
+			<td> £2.50</td>
+		</tr>
+		<tr>
+			<td> </td>
+			<td> </td>
+			<td> </td>
+		</tr>
+		<tr>
+			<td> </td>
+			<td> </td>
+			<td> </td>
+		</tr>
+		<tr>
+			<td> </td>
+			<td> </td>
+			<td> </td>
+		</tr>
+		<tr>
+			<td> </td>
+			<td> </td>
+			<td> </td>
+		</tr>
+		<tr>
+			<td> </td>
+			<td> </td>
+			<td> </td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<div id="Specials" class="tabcontent" hidden>
+  <h3>Specials</h3>
+  <p>Tokyo is the capital of Japan.</p>
 </div>
 
 <div id="Main" class="tabcontent" hidden>
   <h3>Main</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<div id="Dessert" class="tabcontent" hidden>
+  <h3>Dessert</h3>
   <p>Tokyo is the capital of Japan.</p>
 </div>
     </body>
@@ -63,6 +162,7 @@
       </div>
       </div>
   </footer>
+  </div>
   </body>
   <script type="text/javascript">
   function openMenu(evt, cityName) {
@@ -79,11 +179,25 @@
     tablinks = document.getElementsByClassName("tablinks");
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
+        tablinks[i].style.background="#42f46b";
     }
 
     // Show the current tab, and add an "active" class to the button that opened the tab
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
+    evt.currentTarget.style.background="#e8491d";
+}
+function showMenu(){
+  var i;
+  var x = document.getElementsByClassName("menuList");
+  var y =document.getElementsByClassName("menu_i");
+  for(i=0;i<x.length;i++){
+    x[i].style.display="block";
+  }
+  for(i=0;i<y.length;i++){
+    y[i].style.display="none";
+  }
+
 }
   </script>
 </html>

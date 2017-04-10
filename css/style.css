@@ -164,7 +164,9 @@ footer .box{
   text-align: center;
   color: #ffffff;
 }
-
+.menu_content{
+  text-align: center;
+}
 .tab{
   text-align: center;
   padding: 10px;
@@ -184,7 +186,9 @@ footer .box{
 .map{
   color: #ffffff;
 }
-
+#menu_list h3{
+  text-align: center;
+}
 @media(max-width: 768px) {
   header #branding,
   header nav,
@@ -209,6 +213,11 @@ footer .box{
     width: 100%;
   }
 
+  footer .box{
+    display: block;
+    width: 100%;
+  }
+
   .menu_i{
     position: absolute;
     left: 50%;
@@ -216,5 +225,19 @@ footer .box{
 
   .menu_icon{
     visibility: visible;
+  }
+.tab{
+  position: absolute;
+}
+  .tablinks{
+    text-align: center;
+    display: block;
+    width: 100px;
+    margin-bottom: 5px;
+    padding: 20px;
+  }
+  .tab2{
+    position: absolute;
+    left: 150px;
   }
 }
